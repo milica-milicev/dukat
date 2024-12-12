@@ -1,0 +1,49 @@
+/*--------------------------------------------------------------
+## Main Variables
+--------------------------------------------------------------*/
+// Fonts
+$font-default-serif: 'Quando';
+$font-default-sans-serif: 'Instrument Sans';
+
+$font-main: $font-default-sans-serif;
+$font-sec: $font-default-serif;
+
+$site-fonts: (
+	'font-main': $font-main,
+	'font-sec': $font-sec,
+) !default;
+
+// Colors
+$white: #fff;
+$black: #000;
+$grey-dark: #4f4a47;
+$cascade: #879f98;
+$gold: #d0b267;
+$green-dark: #4f6b63;
+$green-light: #669eb3;
+
+$site-colors: (
+	'white': $white,
+	'black': $black,
+	'grey-dark': $grey-dark,
+	'cascade': $cascade,
+	'gold': $gold,
+	'green-dark': $green-dark,
+	'green-light': $green-light,
+) !default;
+
+// Transitions
+$dur: 350ms;
+$ease: ease;
+
+/*--------------------------------------------------------------
+## Breakpoint Variables
+--------------------------------------------------------------*/
+$xs: 400px;
+$smx: 500px;
+$sm: 575px;
+$md: 767px;
+$lg: 991px;
+$xl: 1199px;
+$xxl: 1399px;
+$xxxl: 1599px;

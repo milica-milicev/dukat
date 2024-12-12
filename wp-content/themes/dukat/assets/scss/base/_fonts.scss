@@ -1,0 +1,38 @@
+/*--------------------------------------------------------------
+## Fonts
+--------------------------------------------------------------*/
+// @font-face {
+//     font-family: 'Open Sans';
+//     src: url('assets/fonts/OpenSans-Regular.woff2') format('woff2'),
+//         url('assets/fonts/OpenSans-Regular.woff') format('woff');
+//     font-weight: normal;
+//     font-style: normal;
+//     font-display: swap;
+// }
+
+@font-face {
+    font-family: 'Instrument Sans';
+    src: url('assets/fonts/InstrumentSans-Medium.woff2') format('woff2'),
+        url('assets/fonts/InstrumentSans-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Instrument Sans';
+    src: url('assets/fonts/InstrumentSans-Regular.woff2') format('woff2'),
+        url('assets/fonts/InstrumentSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Quando';
+    src: url('assets/fonts/Quando-Regular.woff2') format('woff2'),
+        url('assets/fonts/Quando-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

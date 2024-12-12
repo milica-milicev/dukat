@@ -1,0 +1,102 @@
+/*--------------------------------------------------------------
+## tiles
+--------------------------------------------------------------*/
+.tiles {
+    padding: 120px 0;
+
+    @include mq($xl) {
+        padding: 100px 0;
+    }
+
+    @include mq($lg) {
+        padding: 80px 0;
+    }
+
+    @include mq($md) {
+        padding: 40px 0;
+    }
+}
+
+.tiles__title {
+    text-align: center;
+}
+
+.tiles__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -20px 50px;
+
+    @include mq($lg) {
+        margin: 0 -10px 30px;
+    }
+
+    @include mq($sm) {
+        margin: 0;
+    }
+}
+
+.tiles__item {
+    flex: 0 0 25%;
+    max-width: 25%;
+    padding: 0 20px;
+
+    @include mq($lg) {
+        padding: 0 10px;
+    }
+
+    @include mq($md) {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    @include mq($sm) {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 0;
+    }
+}
+
+.tiles__item-img {
+    border-radius: 10px;
+}
+
+.tiles__item-info {
+    padding: 40px 20px;
+
+    @include mq($xl) {
+        padding: 30px 10px;
+    }
+
+    @include mq($lg) {
+        padding: 20px 0;
+    }
+}
+
+.tiles__item-title {
+	@include clamp-font-size(16, 24);
+	margin-bottom: 20px;
+
+    @include mq($md) {
+        margin-bottom: 10px;
+    }
+}
+
+.tiles__item-subtext {
+    @include clamp-font-size(14, 16);
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.tiles__item-text {
+    @include clamp-font-size(14, 16);
+    margin-bottom: 20px;
+
+    @include mq($md) {
+        margin-bottom: 10px;
+    }
+}
+
+.tiles__footer {
+    text-align: center;
+}

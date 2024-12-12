@@ -1,0 +1,38 @@
+/*--------------------------------------------------------------
+## Buttons
+--------------------------------------------------------------*/
+.btn,
+input[type='submit'] {
+	@include clamp-font-size(14, 20);
+	font-weight: 500;
+	background-color: $gold;
+	color: $white;
+	padding: 20px 30px;
+	transition: $dur $ease;
+	min-width: 200px;
+	text-align: center;
+	display: inline-block;
+
+	@include hover {
+		background-color: $green-light;
+	}
+
+	@include mq($md) {
+        padding: 15px;
+    }
+}
+
+.link {
+	font-size: 15px;
+}
+
+.link--arrow {
+	@include font(arrow-right, after);
+	display: flex;
+	align-items: center;
+
+	&::after {
+		margin-left: 20px;
+		font-size: 10px;
+	}
+}
