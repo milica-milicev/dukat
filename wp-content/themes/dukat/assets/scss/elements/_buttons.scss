@@ -3,11 +3,11 @@
 --------------------------------------------------------------*/
 .btn,
 input[type='submit'] {
-	@include clamp-font-size(14, 20);
+	@include clamp-font-size(14, 17);
 	font-weight: 500;
 	background-color: $gold;
 	color: $white;
-	padding: 20px 30px;
+	padding: 14px 30px;
 	transition: $dur $ease;
 	min-width: 200px;
 	text-align: center;

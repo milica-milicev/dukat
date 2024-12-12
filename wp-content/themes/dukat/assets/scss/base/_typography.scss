@@ -35,7 +35,7 @@ h6 {
 
 .section-title {
 	color: $green-dark;
-	@include clamp-font-size(20, 50);
+	@include clamp-font-size(24, 50);
 	margin-bottom: 50px;
 
 	@include mq($xl) {
@@ -49,6 +49,10 @@ h6 {
 	@include mq($md) {
         margin-bottom: 20px;
     }
+}
+
+.section-subtitle {
+	@include clamp-font-size(14, 18);
 }
 
 /*--------------------------------------------------------------

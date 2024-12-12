@@ -1,0 +1,89 @@
+.recent-posts {
+    padding: 150px 0 80px;
+
+    @include mq($md) {
+        padding: 60px 0 40px;
+    }
+}
+
+.recent-posts__wrap {
+    display: flex;
+    justify-content: space-between;
+
+    .section-title {
+        margin-bottom: 0;
+    }
+
+    .section-subtitle {
+        max-width: 800px;
+        color: $grey-dark;
+        margin-bottom: 80px;
+    }
+
+    @include mq($md) {
+        display: block;
+
+        .section-title {
+            margin-bottom: 20px;
+        }
+
+        .section-subtitle {
+            margin-bottom: 40px;
+        }
+    }
+}
+
+.recent-posts__container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -40px;
+
+    @include mq($md) {
+        margin: 0;
+        display: block;
+    }
+}
+
+.recent-post__item {
+    flex: 33.3%;
+    max-width: 33.3%;
+    padding: 0 40px;
+
+    @include mq($md) {
+        flex: 100%;
+        max-width: 100%;
+        padding: 0;
+        margin-bottom: 60px;
+    }
+}
+
+.recent-post__item-img {
+    margin-bottom: 40px;
+
+    @include mq($md) {
+        margin-bottom: 20px;
+    }
+}
+
+.recent-post__item-title {
+    @include clamp-font-size(18, 24);
+    color: $grey-dark;
+    margin-bottom: 20px;
+
+    @include mq($md) {
+        margin-bottom: 10px;
+    }
+}
+
+.recent-post__item-subtitle {
+    @include clamp-font-size(14, 16);
+    color: $grey-dark;
+    margin-bottom: 20px;
+    max-width: 370px;
+}
+
+
+.recent-posts__btn {
+    margin-top: 60px;
+    text-align: center;
+}

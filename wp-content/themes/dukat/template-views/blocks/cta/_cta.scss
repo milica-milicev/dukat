@@ -1,0 +1,31 @@
+.cta {
+    padding: 50px 0 100px;
+}
+
+.cta__container {
+    background-color: $grey-dark;
+    padding: 50px;
+    border-radius: 10px;
+
+    @include mq($md) {
+        padding: 30px;
+    }
+}
+
+.cta-item__title {
+    @include clamp-font-size(30, 50);
+    color: $white;
+    max-width: 650px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+
+    span {
+        color: $gold;
+    }
+}
+
+.cta-item__subtitle {
+    color: $white;
+    @include clamp-font-size(16, 24);
+    margin-bottom: 30px;
+}

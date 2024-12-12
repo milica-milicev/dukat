@@ -13,14 +13,18 @@ html {
 *,
 *::before,
 *::after {
-	box-sizing: inherit;
+	box-sizing: border-box;
 }
 
 .container {
     width: 100%;
-    max-width: 1620px;
+    max-width: 1580px;
     margin: 0 auto;
-    padding: 0 50px;
+    padding: 0 80px;
+
+    @include mq($xl) {
+        padding: 0 25px;
+    }
 
     @include mq($md) {
         padding: 0 15px;

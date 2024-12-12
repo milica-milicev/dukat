@@ -20,6 +20,7 @@ Theme Name: NM Theme
 /*--------------------------------------------------------------
 ## Reset
 --------------------------------------------------------------*/
+@import 'assets/css-plugins/swiper-bundle.min.css';
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
   margin: 0;
   padding: 0;
@@ -514,7 +515,7 @@ h6 {
 
 .section-title {
   color: #4f6b63;
-  font-size: clamp(1.25rem, 1.25rem + (3.125 - 1.25) * ((100vw - 20rem) / (120 - 20)), 3.125rem);
+  font-size: clamp(1.5rem, 1.5rem + (3.125 - 1.5) * ((100vw - 20rem) / (120 - 20)), 3.125rem);
   margin-bottom: 50px;
 }
 @media screen and (max-width: 1199px) {
@@ -531,6 +532,10 @@ h6 {
   .section-title {
     margin-bottom: 20px;
   }
+}
+
+.section-subtitle {
+  font-size: clamp(0.875rem, 0.875rem + (1.125 - 0.875) * ((100vw - 20rem) / (120 - 20)), 1.125rem);
 }
 
 /*--------------------------------------------------------------
@@ -666,14 +671,19 @@ html {
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 .container {
   width: 100%;
-  max-width: 1620px;
+  max-width: 1580px;
   margin: 0 auto;
-  padding: 0 50px;
+  padding: 0 80px;
+}
+@media screen and (max-width: 1199px) {
+  .container {
+    padding: 0 25px;
+  }
 }
 @media screen and (max-width: 767px) {
   .container {
@@ -689,11 +699,11 @@ html {
 --------------------------------------------------------------*/
 .btn,
 input[type=submit] {
-  font-size: clamp(0.875rem, 0.875rem + (1.25 - 0.875) * ((100vw - 20rem) / (120 - 20)), 1.25rem);
+  font-size: clamp(0.875rem, 0.875rem + (1.0625 - 0.875) * ((100vw - 20rem) / (120 - 20)), 1.0625rem);
   font-weight: 500;
   background-color: #d0b267;
   color: #fff;
-  padding: 20px 30px;
+  padding: 14px 30px;
   transition: 350ms ease;
   min-width: 200px;
   text-align: center;
@@ -1566,6 +1576,9 @@ a:hover, a:focus, a:active {
   max-width: 25%;
   padding: 0 20px;
 }
+.tiles__item .link--arrow {
+  justify-content: center;
+}
 @media screen and (max-width: 991px) {
   .tiles__item {
     padding: 0 10px;
@@ -1575,6 +1588,10 @@ a:hover, a:focus, a:active {
   .tiles__item {
     flex: 0 0 50%;
     max-width: 50%;
+    margin-bottom: 60px;
+  }
+  .tiles__item:last-of-type {
+    margin-bottom: 0;
   }
 }
 @media screen and (max-width: 575px) {
@@ -1587,10 +1604,12 @@ a:hover, a:focus, a:active {
 
 .tiles__item-img {
   border-radius: 10px;
+  width: 100%;
 }
 
 .tiles__item-info {
   padding: 40px 20px;
+  text-align: center;
 }
 @media screen and (max-width: 1199px) {
   .tiles__item-info {
@@ -1604,25 +1623,23 @@ a:hover, a:focus, a:active {
 }
 
 .tiles__item-title {
-  font-size: clamp(1rem, 1rem + (1.5 - 1) * ((100vw - 20rem) / (120 - 20)), 1.5rem);
-  margin-bottom: 20px;
-}
-@media screen and (max-width: 767px) {
-  .tiles__item-title {
-    margin-bottom: 10px;
-  }
+  font-size: 20px;
+  margin-bottom: 5px;
+  color: #4f4a47;
 }
 
 .tiles__item-subtext {
-  font-size: clamp(0.875rem, 0.875rem + (1 - 0.875) * ((100vw - 20rem) / (120 - 20)), 1rem);
+  font-size: clamp(0.75rem, 0.75rem + (0.875 - 0.75) * ((100vw - 20rem) / (120 - 20)), 0.875rem);
   display: block;
   font-weight: bold;
   margin-bottom: 10px;
+  color: #d0b267;
 }
 
 .tiles__item-text {
-  font-size: clamp(0.875rem, 0.875rem + (1 - 0.875) * ((100vw - 20rem) / (120 - 20)), 1rem);
+  font-size: clamp(0.875rem, 0.875rem + (0.9375 - 0.875) * ((100vw - 20rem) / (120 - 20)), 0.9375rem);
   margin-bottom: 20px;
+  color: #4f4a47;
 }
 @media screen and (max-width: 767px) {
   .tiles__item-text {
@@ -1630,7 +1647,365 @@ a:hover, a:focus, a:active {
   }
 }
 
+.tiles__item-price {
+  margin: 10px 0;
+  font-size: clamp(1.375rem, 1.375rem + (2.125 - 1.375) * ((100vw - 20rem) / (120 - 20)), 2.125rem);
+  display: block;
+  font-family: "Quando";
+  color: #4f4a47;
+}
+
 .tiles__footer {
   text-align: center;
+}
+
+.cards {
+  padding: 160px 0;
+  background-color: #e7e7e7;
+}
+@media screen and (max-width: 767px) {
+  .cards {
+    padding: 60px 0 80px;
+  }
+}
+
+.cards-container {
+  padding-left: 80px;
+  position: relative;
+  margin-left: auto;
+  max-width: calc(50% + 800px);
+}
+@media screen and (max-width: 767px) {
+  .cards-container {
+    padding-left: 15px;
+  }
+}
+
+.cards-content {
+  margin-bottom: 40px;
+  display: flex;
+  grid-gap: 40px;
+}
+.cards-content .section-title {
+  margin-bottom: 0;
+}
+.cards-content .section-subtitle {
+  max-width: 500px;
+  color: #4f4a47;
+}
+@media screen and (max-width: 767px) {
+  .cards-content {
+    display: block;
+  }
+  .cards-content .section-title {
+    margin-bottom: 20px;
+  }
+}
+
+.card-item {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+}
+.card-item .link {
+  color: #4f4a47;
+}
+@media only screen and (min-width: 1199px) {
+  .card-item .link:hover {
+    color: #669eb3;
+  }
+}
+@media screen and (max-width: 767px) {
+  .card-item {
+    padding: 15px;
+  }
+}
+
+.card-item__title {
+  font-family: "Quando";
+  font-size: clamp(1.125rem, 1.125rem + (1.8125 - 1.125) * ((100vw - 20rem) / (120 - 20)), 1.8125rem);
+  margin: 22px 0;
+  color: #4f4a47;
+}
+
+.card-item__text {
+  font-size: clamp(0.875rem, 0.875rem + (1 - 0.875) * ((100vw - 20rem) / (120 - 20)), 1rem);
+  margin-bottom: 20px;
+  color: #4f4a47;
+}
+
+.categories {
+  padding: 150px 0;
+}
+.categories .section-title {
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .categories {
+    padding: 60px 0;
+  }
+}
+
+.categories__container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 80px;
+  margin: 0 -20px;
+}
+@media screen and (max-width: 767px) {
+  .categories__container {
+    display: block;
+    margin-top: 30px;
+    margin: 0;
+  }
+}
+
+.category-item {
+  flex: 33.3%;
+  max-width: 33.3%;
+  text-align: center;
+  padding: 0 20px;
+}
+@media screen and (max-width: 767px) {
+  .category-item {
+    flex: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin-bottom: 80px;
+    display: block;
+  }
+  .category-item:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.category-item__img {
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 767px) {
+  .category-item__img {
+    margin-bottom: 24px;
+  }
+}
+
+.category-item__title {
+  font-size: clamp(1.25rem, 1.25rem + (1.5 - 1.25) * ((100vw - 20rem) / (120 - 20)), 1.5rem);
+  color: #4f4a47;
+}
+
+.category-item__btn {
+  margin-top: 20px;
+}
+
+.half-sec {
+  padding: 150px 0;
+  background-color: #e7e7e7;
+}
+.half-sec .section-title {
+  margin-bottom: 30px;
+}
+.half-sec .section-subtitle {
+  color: #4f4a47;
+}
+@media screen and (max-width: 767px) {
+  .half-sec {
+    padding: 60px 0;
+  }
+}
+
+.half-sec__container {
+  display: flex;
+  justify-content: space-between;
+  grid-gap: 50px;
+}
+@media screen and (max-width: 767px) {
+  .half-sec__container {
+    display: block;
+  }
+}
+
+.half-sec__left,
+.half-sec__right {
+  flex: 50%;
+  max-width: 50%;
+}
+@media screen and (max-width: 767px) {
+  .half-sec__left,
+  .half-sec__right {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .half-sec__right {
+    margin-top: 50px;
+  }
+}
+
+.half-sec__left-wrap {
+  display: flex;
+  justify-content: space-between;
+  margin: 40px -20px;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 767px) {
+  .half-sec__left-wrap {
+    margin: 30px 0;
+  }
+}
+
+.half-sec__left-item {
+  flex: 48%;
+  max-width: 48%;
+  padding: 20px 30px;
+  background-color: #fff;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+.half-sec__left-item h3 {
+  margin-bottom: 15px;
+  color: #4f4a47;
+  font-size: clamp(1.125rem, 1.125rem + (1.5 - 1.125) * ((100vw - 20rem) / (120 - 20)), 1.5rem);
+}
+.half-sec__left-item p {
+  color: #4f4a47;
+  font-size: clamp(0.875rem, 0.875rem + (1 - 0.875) * ((100vw - 20rem) / (120 - 20)), 1rem);
+}
+.half-sec__left-item:last-of-type {
+  flex: 100%;
+  max-width: 100%;
+}
+@media screen and (max-width: 767px) {
+  .half-sec__left-item {
+    padding: 20px 12px;
+  }
+}
+
+.half-sec__btn {
+  text-align: center;
+}
+
+.recent-posts {
+  padding: 150px 0 80px;
+}
+@media screen and (max-width: 767px) {
+  .recent-posts {
+    padding: 60px 0 40px;
+  }
+}
+
+.recent-posts__wrap {
+  display: flex;
+  justify-content: space-between;
+}
+.recent-posts__wrap .section-title {
+  margin-bottom: 0;
+}
+.recent-posts__wrap .section-subtitle {
+  max-width: 800px;
+  color: #4f4a47;
+  margin-bottom: 80px;
+}
+@media screen and (max-width: 767px) {
+  .recent-posts__wrap {
+    display: block;
+  }
+  .recent-posts__wrap .section-title {
+    margin-bottom: 20px;
+  }
+  .recent-posts__wrap .section-subtitle {
+    margin-bottom: 40px;
+  }
+}
+
+.recent-posts__container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 -40px;
+}
+@media screen and (max-width: 767px) {
+  .recent-posts__container {
+    margin: 0;
+    display: block;
+  }
+}
+
+.recent-post__item {
+  flex: 33.3%;
+  max-width: 33.3%;
+  padding: 0 40px;
+}
+@media screen and (max-width: 767px) {
+  .recent-post__item {
+    flex: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin-bottom: 60px;
+  }
+}
+
+.recent-post__item-img {
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 767px) {
+  .recent-post__item-img {
+    margin-bottom: 20px;
+  }
+}
+
+.recent-post__item-title {
+  font-size: clamp(1.125rem, 1.125rem + (1.5 - 1.125) * ((100vw - 20rem) / (120 - 20)), 1.5rem);
+  color: #4f4a47;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 767px) {
+  .recent-post__item-title {
+    margin-bottom: 10px;
+  }
+}
+
+.recent-post__item-subtitle {
+  font-size: clamp(0.875rem, 0.875rem + (1 - 0.875) * ((100vw - 20rem) / (120 - 20)), 1rem);
+  color: #4f4a47;
+  margin-bottom: 20px;
+  max-width: 370px;
+}
+
+.recent-posts__btn {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.cta {
+  padding: 50px 0 100px;
+}
+
+.cta__container {
+  background-color: #4f4a47;
+  padding: 50px;
+  border-radius: 10px;
+}
+@media screen and (max-width: 767px) {
+  .cta__container {
+    padding: 30px;
+  }
+}
+
+.cta-item__title {
+  font-size: clamp(1.875rem, 1.875rem + (3.125 - 1.875) * ((100vw - 20rem) / (120 - 20)), 3.125rem);
+  color: #fff;
+  max-width: 650px;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+.cta-item__title span {
+  color: #d0b267;
+}
+
+.cta-item__subtitle {
+  color: #fff;
+  font-size: clamp(1rem, 1rem + (1.5 - 1) * ((100vw - 20rem) / (120 - 20)), 1.5rem);
+  margin-bottom: 30px;
 }
 /*# sourceMappingURL=style.css.map */
