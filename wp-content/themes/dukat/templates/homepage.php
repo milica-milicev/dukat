@@ -27,6 +27,7 @@ get_header();
 			get_template_part( 'template-views/blocks/half-sec/half-sec' );
 			get_template_part( 'template-views/blocks/recent-posts/recent-posts' );
 			get_template_part( 'template-views/blocks/cta/cta' );
+			get_template_part( 'template-views/blocks/text-img/text-img' );
 		?>
 	</main>
 </div>

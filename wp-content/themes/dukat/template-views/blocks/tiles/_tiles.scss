@@ -39,6 +39,9 @@
     flex: 0 0 25%;
     max-width: 25%;
     padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     .link--arrow {
         justify-content: center;
@@ -68,6 +71,11 @@
 .tiles__item-img {
     border-radius: 10px;
     width: 100%;
+
+    @include mq($md) {
+        max-height: 380px;
+        object-fit: cover;
+    }
 }
 
 .tiles__item-info {
@@ -87,10 +95,6 @@
 	font-size: 20px;
 	margin-bottom: 5px;
     color: $grey-dark;
-
-    // @include mq($md) {
-    //     margin-bottom: 10px;
-    // }
 }
 
 .tiles__item-subtext {
@@ -102,7 +106,7 @@
 }
 
 .tiles__item-text {
-    @include clamp-font-size(14, 15);
+    @include clamp-font-size(13, 14);
     margin-bottom: 20px;
     color: $grey-dark;
 
@@ -113,7 +117,7 @@
 
 .tiles__item-price {
     margin: 10px 0;
-    @include clamp-font-size(22, 34);
+    @include clamp-font-size(16, 20);
     display: block;
     font-family: $font-sec;
     color: $grey-dark;

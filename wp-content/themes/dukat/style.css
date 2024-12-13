@@ -722,8 +722,19 @@ input[type=submit] {
   }
 }
 
+.btn--green {
+  background-color: #172d27;
+  color: #fff;
+}
+@media only screen and (min-width: 1199px) {
+  .btn--green:hover {
+    background-color: #4f6b64;
+  }
+}
+
 .link {
-  font-size: 15px;
+  font-size: clamp(0.8125rem, 0.8125rem + (0.9375 - 0.8125) * ((100vw - 20rem) / (120 - 20)), 0.9375rem);
+  color: #4f4a47;
 }
 
 .link--arrow {
@@ -1575,6 +1586,9 @@ a:hover, a:focus, a:active {
   flex: 0 0 25%;
   max-width: 25%;
   padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .tiles__item .link--arrow {
   justify-content: center;
@@ -1605,6 +1619,13 @@ a:hover, a:focus, a:active {
 .tiles__item-img {
   border-radius: 10px;
   width: 100%;
+}
+@media screen and (max-width: 767px) {
+  .tiles__item-img {
+    max-height: 380px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
 }
 
 .tiles__item-info {
@@ -1637,7 +1658,7 @@ a:hover, a:focus, a:active {
 }
 
 .tiles__item-text {
-  font-size: clamp(0.875rem, 0.875rem + (0.9375 - 0.875) * ((100vw - 20rem) / (120 - 20)), 0.9375rem);
+  font-size: clamp(0.8125rem, 0.8125rem + (0.875 - 0.8125) * ((100vw - 20rem) / (120 - 20)), 0.875rem);
   margin-bottom: 20px;
   color: #4f4a47;
 }
@@ -1649,7 +1670,7 @@ a:hover, a:focus, a:active {
 
 .tiles__item-price {
   margin: 10px 0;
-  font-size: clamp(1.375rem, 1.375rem + (2.125 - 1.375) * ((100vw - 20rem) / (120 - 20)), 2.125rem);
+  font-size: clamp(1rem, 1rem + (1.25 - 1) * ((100vw - 20rem) / (120 - 20)), 1.25rem);
   display: block;
   font-family: "Quando";
   color: #4f4a47;
@@ -1674,6 +1695,11 @@ a:hover, a:focus, a:active {
   position: relative;
   margin-left: auto;
   max-width: calc(50% + 800px);
+}
+.cards-container .swiper-slide {
+  display: flex;
+  flex-direction: column;
+  height: auto;
 }
 @media screen and (max-width: 767px) {
   .cards-container {
@@ -1709,6 +1735,7 @@ a:hover, a:focus, a:active {
 }
 .card-item .link {
   color: #4f4a47;
+  margin-top: auto;
 }
 @media only screen and (min-width: 1199px) {
   .card-item .link:hover {
@@ -1723,7 +1750,7 @@ a:hover, a:focus, a:active {
 
 .card-item__title {
   font-family: "Quando";
-  font-size: clamp(1.125rem, 1.125rem + (1.8125 - 1.125) * ((100vw - 20rem) / (120 - 20)), 1.8125rem);
+  font-size: clamp(1.125rem, 1.125rem + (1.5625 - 1.125) * ((100vw - 20rem) / (120 - 20)), 1.5625rem);
   margin: 22px 0;
   color: #4f4a47;
 }
@@ -1781,6 +1808,13 @@ a:hover, a:focus, a:active {
 
 .category-item__img {
   margin-bottom: 40px;
+}
+@media screen and (max-width: 767px) {
+  .category-item__img img {
+    max-height: 380px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
 }
 @media screen and (max-width: 767px) {
   .category-item__img {
@@ -2007,5 +2041,42 @@ a:hover, a:focus, a:active {
   color: #fff;
   font-size: clamp(1rem, 1rem + (1.5 - 1) * ((100vw - 20rem) / (120 - 20)), 1.5rem);
   margin-bottom: 30px;
+}
+
+.text-img {
+  padding: 150px 0;
+  background-color: #bce4c5;
+}
+.text-img .section-title {
+  margin-bottom: 30px;
+  font-size: clamp(1.25rem, 1.25rem + (2.5 - 1.25) * ((100vw - 20rem) / (120 - 20)), 2.5rem);
+  color: #172d27;
+}
+.text-img .section-subtitle {
+  color: #4f6b64;
+  margin-bottom: 30px;
+}
+
+.text-img__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.text-img__item-left {
+  flex: 60%;
+  max-width: 60%;
+}
+
+.text-img__item-right {
+  background-color: #eBf8ee;
+  padding: 40px;
+  height: -moz-max-content;
+  height: max-content;
+  border-radius: 10px;
+}
+.text-img__item-right h4 {
+  margin-bottom: 40px;
+  font-size: clamp(1rem, 1rem + (1.5 - 1) * ((100vw - 20rem) / (120 - 20)), 1.5rem);
+  color: #4f4a47;
 }
 /*# sourceMappingURL=style.css.map */

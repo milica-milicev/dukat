@@ -1,0 +1,38 @@
+.text-img {
+    padding: 150px 0;
+    background-color: $granny-apple;
+
+    .section-title {
+        margin-bottom: 30px;
+        @include clamp-font-size(20, 40);
+        color: $dark;
+    }
+
+    .section-subtitle {
+        color: $dark-green;
+        margin-bottom: 30px;
+    }
+}
+
+.text-img__container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.text-img__item-left {
+    flex: 60%;
+    max-width: 60%;
+}
+
+.text-img__item-right {
+    background-color: $dew;
+    padding: 40px;
+    height: max-content;
+    border-radius: 10px;
+
+    h4 {
+        margin-bottom: 40px;
+        @include clamp-font-size(16, 24);
+        color: $grey-dark;
+    }
+}

@@ -13,6 +13,12 @@
     margin-left: auto;
     max-width: calc(50% + 800px);
 
+    .swiper-slide {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+
     @include mq($md) {
         padding-left: 15px;
     }
@@ -48,6 +54,7 @@
 
     .link {
         color: $grey-dark;
+        margin-top: auto;
 
         @include hover {
             color: $green-light;
@@ -61,7 +68,7 @@
 
 .card-item__title {
     font-family: $font-sec;
-    @include clamp-font-size(18, 29);
+    @include clamp-font-size(18, 25);
     margin: 22px 0;
     color: $grey-dark;
 }
