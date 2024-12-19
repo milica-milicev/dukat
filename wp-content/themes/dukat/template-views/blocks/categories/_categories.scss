@@ -1,5 +1,5 @@
 .categories {
-    padding: 150px 0;
+    padding: 130px 0;
 
     .section-title {
         text-align: center;
@@ -47,7 +47,7 @@
 
     @include mq($md) {
         img {
-            max-height: 380px;
+            // max-height: 380px;
             object-fit: cover;
         }
     }

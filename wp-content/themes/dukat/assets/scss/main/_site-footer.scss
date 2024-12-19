@@ -2,13 +2,81 @@
 ## Footer
 --------------------------------------------------------------*/
 .site-footer {
-	background-color: $black;
+	background-color: $dark;
+	padding: 100px 0 30px;
+
+	@include mq($md) {
+		padding: 50px 0 30px;
+	}
 }
 
 .site-footer__copyright {
 	font-family: $font-main;
-	font-weight: 600;
+	// font-weight: 600;
 	font-size: 0.875rem;
 	line-height: 1.35;
 	color: $white;
+}
+
+.site-footer__container {
+	display: flex;
+	justify-content: space-between;
+
+	@include mq($md) {
+		display: block;
+	}
+}
+
+.site-footer__right-container {
+	display: flex;
+	justify-content: space-between;
+	// grid-gap: 115px;
+	grid-gap: 6vw;
+	flex-wrap: wrap;
+
+	span {
+		color: $white;
+		display: block;
+		padding-bottom: 15px;
+		font-weight: bold;
+	}
+
+	ul {
+		li {
+			padding-bottom: 15px;
+
+			a {
+				color: $white;
+				transition: $dur $ease;
+			}
+		}
+	}
+
+	@include hover {
+		ul {
+			li {
+				a {
+					&:hover {
+						color: $gold;
+					}
+				}
+			}
+		}
+	}
+
+	@include mq($md) {
+		grid-gap: 0;
+		margin-top: 40px;
+	}
+}
+
+.site-footer__right-item {
+	@include mq($md) {
+		flex: 50%;
+		max-width: 50%;
+
+		&:first-of-type {
+			margin-bottom: 40px;
+		}
+	}
 }

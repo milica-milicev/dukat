@@ -23,7 +23,7 @@
 			<div class="tiles__item">
 				<img class="tiles__item-img" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/_demo/product-2.jpg" alt="">
 				<div class="tiles__item-info">
-					<h2 class="tiles__item-title">Ulje Suncokreta sa ukusom Chilli paprike</h2>
+					<h2 class="tiles__item-title">Ulje Suncokreta Chilli</h2>
 					<span class="tiles__item-subtext">750ml</span>
 					<span class="tiles__item-price">460 rsd</span>
 					<p class="tiles__item-text">Hladno presovano, jestivo biljno ulje od semena suncokreta sa ukusom Chilli paprike, visok sadržaj oleinske kiseline</p>

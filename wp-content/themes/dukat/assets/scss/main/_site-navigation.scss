@@ -112,7 +112,7 @@ a {
 .main-navigation__menu a {
 	font-family: $font-main;
 	font-weight: 400;
-	font-size: 16px;
+	@include clamp-font-size(14, 16);
 	line-height: 1.375;
 	text-transform: uppercase;
 	color: $cascade;
