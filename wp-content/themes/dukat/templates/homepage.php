@@ -23,7 +23,7 @@ get_header();
 			get_template_part( 'template-views/blocks/hero/hero' );
 			get_template_part( 'template-views/blocks/tiles/tiles' );
 			get_template_part( 'template-views/blocks/cards/cards' );
-			get_template_part( 'template-views/blocks/categories/categories' );
+			get_template_part( 'template-views/blocks/isolated-categories/isolated-categories' );
 			get_template_part( 'template-views/blocks/half-sec/half-sec' );
 			get_template_part( 'template-views/blocks/recent-posts/recent-posts' );
 			get_template_part( 'template-views/blocks/cta/cta' );

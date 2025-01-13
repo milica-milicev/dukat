@@ -58,6 +58,21 @@ Theme Name: NM Theme
 @import 'main/site-footer';
 @import 'main/site-404';
 
+
+/*--------------------------------------------------------------
+# Woocommerce
+--------------------------------------------------------------*/
+@import 'woocommerce/global';
+@import 'woocommerce/products-list';
+@import 'woocommerce/product';
+@import 'woocommerce/fields';
+@import 'woocommerce/cart';
+@import 'woocommerce/checkout';
+@import 'woocommerce/thank-you-page';
+@import 'woocommerce/variable';
+@import 'woocommerce/related';
+@import 'woocommerce/categories';
+
 /*--------------------------------------------------------------
 # Components / Templates
 --------------------------------------------------------------*/
